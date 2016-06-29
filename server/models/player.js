@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var PlayerSchema = new mongoose.Schema({
 	name: String,
-	_room: { type: Schema.Types.ObjectId, ref: "Room"}
+	days_survived: Number,
+	file_name: String
 }, { timestamps: true } );
 mongoose.model('Player', PlayerSchema);
