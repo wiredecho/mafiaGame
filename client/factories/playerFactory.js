@@ -16,5 +16,4 @@ mafiaApp.factory('playerFactory', function($http) {
 		});
 	}
 	return factory;
-
 });

@@ -1,0 +1,13 @@
+<div ng-controller="gamesController">
+	~ * ~ playing game ~ * ~
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Actions (vote as mafia)</th>
+		</tr>
+		<tr ng-repeat="player in players">
+			<td>{{player.name}}</td>
+			<td><button ng-click="vote(player)">(╯°□°)╯︵ ┻━┻</button></td>
+		</tr>
+	</table>
+</div>
