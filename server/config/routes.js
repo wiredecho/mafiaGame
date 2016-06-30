@@ -1,13 +1,17 @@
-var Rooms = require('../controllers/rooms.js');
-var Users = require('../controllers/users.js');
+var Players = require('../controllers/players.js');
 
 
 module.exports = function(app) {
 
-	app.post('/users', function(req, res) {
-		users.create(req, res);
+	// app.post('/newGame', function(req, res) {
+	// 	players.create(req, res);
+	// });
+	app.get('/players', function(req, res) {
+		Players.index(req, res);
 	});
-	app.get('/users', function(req, res) {
-		users.index(req, res);
+	app.post('/players', function(req, res) {
+		console.log('server routes', req.body)
+		Players.create(req, res);
+
 	});
 };

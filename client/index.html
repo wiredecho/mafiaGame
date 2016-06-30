@@ -4,14 +4,29 @@
 	<title>Mafia GAMEZ1</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
-	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+ 	<script src="./factories/playerFactory.js"></script>
+ 	<!-- Controllers -->
+ 	<script src="./controllers/newGamesController.js"></script>
+ 	<script src="./controllers/newPlayersController.js"></script>
+ 	<script src="./controllers/waitingPageController.js"></script>
 	<script>
-	var mafiaAppModule = angular.module('mafiaApp', ['ngRoute']);
 	// Angular Routes:
-	mafiaAppModule.config(function($routeProvider) {
+	mafiaApp.config(function($routeProvider) {
 		$routeProvider
 		.when('/', {
-			templateUrl: '../static/partials/masterStart.html'
+			templateUrl: '../static/partials/createJoin.html'
+		})
+		.when('/newGame', {
+			templateUrl: '../static/partials/newGame.html'
+		})		
+		.when('/gameMaster', {
+			templateUrl: '../static/partials/gameMaster.html'
+		})
+		.when('/newPlayer', {
+			templateUrl: '../static/partials/newPlayer.html'
+		})
+		.when('/waitingPage', {
+			templateUrl: '../static/partials/waitingPage.html'
 		})
 	})
 	</script>
